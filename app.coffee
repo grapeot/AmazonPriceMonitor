@@ -10,5 +10,4 @@ app.get('/data', (req, res) ->
 app.get('/', (req, res) ->
     res.render(__dirname + '/visualize.jade')
 )
-
 server.listen(4000)
