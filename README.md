@@ -4,6 +4,10 @@ If you're selling (or buying) something at amazon, it'll be useful to know the h
 
 This is also a good startpoint for web crawling and js visualization. I think the front-end library management (with `npm`) in this repo is interesting too.
 
+# Screenshot
+
+![](https://raw.github.com/grapeot/AmazonPriceMonitor/master/screen.png)
+
 # Deployment
 
 ```

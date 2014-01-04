@@ -21,7 +21,10 @@ body
                 });
                 toPlot = _.filter(toPlot, function(d) { return !isNaN(d[0]); });
                 $.plot($('#placeholder'), [toPlot], {
-                    xaxis: { mode: 'time' }
+                    xaxis: { 
+                        mode: 'time',
+                        timezone: 'browser'
+                    }
                 });
             });
         });
