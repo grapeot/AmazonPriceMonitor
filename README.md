@@ -12,8 +12,10 @@ This is also a good startpoint for web crawling and js visualization. I think th
     npm install
 
     # deploy the crawler
+    # edit the crawl.sh according to your path
+    vim crawl.sh
     # example crontab configuration:
-    # 0 * * * * /path/to/repo/amazon.sh 
+    # 0 * * * * /path/to/repo/crawl.sh 
     crontab -e
 
     # launch!
