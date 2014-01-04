@@ -3,8 +3,8 @@ html
     head
         script(src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js")
         script(src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js")
-        script(src="/flot/jquery.flot.js")
-        script(src="/flot/jquery.flot.time.js")
+        script(src="./flot/jquery.flot.js")
+        script(src="./flot/jquery.flot.time.js")
     
     body
         h2 Price change visualization of the our SSD
@@ -13,7 +13,7 @@ html
     
         script.
             $(function () {
-                $.get('/data', function(data) {
+                $.get('./data', function(data) {
                     toPlot = _.map(data.split('\n'), function(d) {
                         var fields = d.split('$');
                         var time = new Date(fields[0]).getTime();
