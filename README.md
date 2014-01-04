@@ -28,3 +28,7 @@ This is also a good startpoint for web crawling and js visualization. I think th
 ```
 
 An example `price.txt` is provided for quick visualizaiton preview. You may want to remove it before crawling your own data.
+
+# Interesting fact
+
+An interesting fact of this repo is, every file has a different extension name/language. :)
