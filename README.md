@@ -1,6 +1,8 @@
 # Amazon price crawler and monitor
 
-If you're selling something at amazon, it'll be useful to know the historical price trends.
+If you're selling (or buying) something at amazon, it'll be useful to know the historical price trends.
+
+This is also a good startpoint for web crawling and js visualization. I think the front-end library management (with `npm`) in this repo is interesting too.
 
 # Deployment
 
@@ -18,4 +20,4 @@ If you're selling something at amazon, it'll be useful to know the historical pr
     coffee app
 ```
 
-An example `price.txt` is provided for quick visualizaiton prwview. You may want to remove it before crawling your own data.
+An example `price.txt` is provided for quick visualizaiton preview. You may want to remove it before crawling your own data.
