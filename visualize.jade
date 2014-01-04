@@ -1,31 +1,32 @@
 doctype html
-head
-    script(src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js")
-    script(src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js")
-    script(src="/flot/jquery.flot.js")
-    script(src="/flot/jquery.flot.time.js")
-
-body
-    h2 Price change visualization of the our SSD
-    a(href='http://www.amazon.com/gp/product/B00DTPYT78/') Link
-    div(id="placeholder" style="width: 600px; height: 300px; padding: 0px; position: relative; margin: 30px")
-
-    script.
-        $(function () {
-            $.get('/data', function(data) {
-                toPlot = _.map(data.split('\n'), function(d) {
-                    var fields = d.split('$');
-                    var time = new Date(fields[0]).getTime();
-                    var price = parseFloat(fields[1]);
-                    return [time, price];
-                });
-                toPlot = _.filter(toPlot, function(d) { return !isNaN(d[0]); });
-                $.plot($('#placeholder'), [toPlot], {
-                    xaxis: { 
-                        mode: 'time',
-                        timezone: 'browser'
-                    }
+html
+    head
+        script(src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js")
+        script(src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js")
+        script(src="/flot/jquery.flot.js")
+        script(src="/flot/jquery.flot.time.js")
+    
+    body
+        h2 Price change visualization of the our SSD
+        a(href='http://www.amazon.com/gp/product/B00DTPYT78/') Link
+        div(id="placeholder" style="width: 600px; height: 300px; padding: 0px; position: relative; margin: 30px")
+    
+        script.
+            $(function () {
+                $.get('/data', function(data) {
+                    toPlot = _.map(data.split('\n'), function(d) {
+                        var fields = d.split('$');
+                        var time = new Date(fields[0]).getTime();
+                        var price = parseFloat(fields[1]);
+                        return [time, price];
+                    });
+                    toPlot = _.filter(toPlot, function(d) { return !isNaN(d[0]); });
+                    $.plot($('#placeholder'), [toPlot], {
+                        xaxis: { 
+                            mode: 'time',
+                            timezone: 'browser'
+                        }
+                    });
                 });
             });
-        });
-
+    
